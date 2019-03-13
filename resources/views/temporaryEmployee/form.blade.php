@@ -13,12 +13,12 @@
                                 <h3 class="mb-0">{{$model->exists ? __('Edit Employee') : __('Add Employee')}}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('employee.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                                <a href="{{ route('employeetemporary.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="{{$model->exists ? 'put' : 'post'}}" action="{{ $model->exists ? route('employee.update') : route('employee.store') }}" autocomplete="off">
+                        <form method="{{$model->exists ? 'put' : 'post'}}" action="{{ $model->exists ? route('employeetemporary.update') : route('employeetemporary.store') }}" autocomplete="off">
                             @csrf
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
@@ -41,22 +41,6 @@
                                             </select>
                                         </div>        
                                     </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>{{__('Jabatan')}}</label>
-                                            <select name="job" class="form-control" id="exampleFormControlSelect1">
-                                                <option value="0">Staff Admin</option>
-                                                <option value="1">Kepala Produksi</option>
-                                                <option value="2">Supervisor</option>
-                                                <option value="3">Security</option>
-                                                <option value="4">Produksi</option>
-                                                <option value="5">Gudang</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="col-6">
                                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                             <label class="form-control-label" for="input-name">{{ __('Mulai Bekerja') }}</label>
@@ -64,7 +48,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                                 </div>
-                                                <input name="start_work" class="form-control datepicker" placeholder="Select date" type="text" value="06/20/2018">
+                                                <input name="work_start" class="form-control datepicker" placeholder="Select date" type="text" value="06/20/2018">
                                             </div>
                                         </div>
                                     </div>

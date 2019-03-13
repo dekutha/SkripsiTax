@@ -38,22 +38,6 @@
                                             {{ Form::select('gender', ['0' => 'Laki-Laki', '1' => 'Perempuan'], null, ['class' => 'form-control', 'placeholder' => 'Pilih Gender', 'id' => 'gender']) }}
                                         </div>        
                                     </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>{{__('Jabatan')}}</label>
-                                            <select name="job" class="form-control" id="exampleFormControlSelect1">
-                                                <option value="0">Staff Admin</option>
-                                                <option value="1">Kepala Produksi</option>
-                                                <option value="2">Supervisor</option>
-                                                <option value="3">Security</option>
-                                                <option value="4">Produksi</option>
-                                                <option value="5">Gudang</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="col-6">
                                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                             <label class="form-control-label" for="input-name">{{ __('Mulai Bekerja') }}</label>

@@ -152,7 +152,7 @@ class ExpertTaxController extends Controller
      * @param  \App\Model\Tax  $tax
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $id)
+    public function destroy($id)
     {
         $model     = ExpertTax::findOrFail($id);
 

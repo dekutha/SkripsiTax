@@ -34,7 +34,6 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">{{ __('Name') }}</th>
-                                    <th scope="col">{{ __('Jabatan') }}</th>
                                     <th scope="col">{{ __('Gaji Pokok') }}</th>
                                     <th scope="col">{{ __('PKP Komulatif') }}</th>
                                     <th scope="col">{{ __('PPh 21 Terutang') }}</th>
@@ -51,13 +50,12 @@
                                 @foreach ($models as $model)
                                     <tr>
                                         <td>{{ $model->employee->name }}</td>
-                                        <td>{{ $model->employee->getJob() }}</td>
                                         <td>Rp. {{ number_format($model->sallary) }}</td>
                                         <td>Rp. {{ number_format($model->fixed_pkp) }}</td>
                                         <td>Rp. {{ number_format($model->anual_pph21) }}</td>
                                         <td>{{ $model->user->name }}</td>
                                         <td>
-                                            <!-- <a href="{{ route('employeetax.show', $model->id) }}" class="btn btn-sm btn-outline-success">detail</a> -->
+                                            <a href="{{ route('experttax.show', $model->id) }}" class="btn btn-sm btn-outline-success">detail</a>
                                             <a href="{{ route('experttax.edit', $model->id) }}" class="btn btn-sm btn-outline-info">Edit</a>
                                             @if(Auth::user()->level == 1)
                                                 <form action="{{ route('experttax.destroy', $model->id) }}" method="post" class="d-inline">

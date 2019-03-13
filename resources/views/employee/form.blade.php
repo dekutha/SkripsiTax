@@ -34,6 +34,12 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
+                                            <label>{{__('Email')}}</label>
+                                            <input type="email" name="email" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" value="{{ old('email') }}" required autofocus>
+                                        </div>        
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
                                             <label>{{__('Gender')}}</label>
                                             <select name="employee_type" class="form-control" id="exampleFormControlSelect1">
                                                 <option value="0">Laki-Laki</option>

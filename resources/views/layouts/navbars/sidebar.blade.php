@@ -116,6 +116,11 @@
                         <i class="ni ni-planet text-blue"></i> {{ __('Pajak Tenaga Ahli') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('etemporarytax.index') }}">
+                        <i class="ni ni-planet text-blue"></i> {{ __('Pajak Pegawai Tidak Tetap') }}
+                    </a>
+                </li>
             </ul>
             <!-- Divider -->
             {{--<hr class="my-3">
